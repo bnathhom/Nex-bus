@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>พี่รักน้อง</title>
+<style>
+  #no {
+    transition: all 0.5s;
+  }
+</style>
+</head>
+<body>
+<h1>พี่รักน้อง</h1>
+<button onclick="yes()">เป็นแฟนพี่</button>
+<button id="no" onclick="no()">ไม่เป็นแฟนพี่</button>
+<script>
+function yes() {
+  alert("พี่รักน้องมากเลย!");
+}
+function no() {
+  document.getElementById("no").style.transform = "scale(1.5)";
+  setTimeout(function() {
+    document.getElementById("no").style.transform = "scale(2)";
+    setTimeout(function() {
+      document.getElementById("no").style.transform = "scale(3)";
+    }, 500);
+  }, 500);
+}
+</script>
+</body>
+</html>
